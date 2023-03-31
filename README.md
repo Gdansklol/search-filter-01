@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [react-bootstarp](https://react-bootstrap.github.io/forms/overview/)
 
+```
+npm i react-bootstrap
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
