@@ -1,6 +1,6 @@
 # Getting Started with Create React Bootstrap
 
-This project was bootstrapped with [react-bootstarp](create-react-apphttps://react-bootstrap.github.io/forms/overview/
+This project was bootstrapped with [react-bootstarp](https://react-bootstrap.github.io/forms/overview/)
 
 ## Available Scripts
 
