@@ -40,6 +40,24 @@ function App() {
                   : item.first_name.toLowerCase().includes(search)
               })
               .map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.first_name}</td>
+                    <td>{item.last_name}</td>
+                    <td>{item.email}</td>
+                    <td>{item.phone}</td>
+          </tr>
+            ))}
+          </tbody>
+
+
+          {/* <tbody>
+            {data
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.first_name.toLowerCase().includes(search)
+              })
+              .map((item) => (
               <tr key={item.id}>
                 <td>{item.first_name}</td>
                 <td>{item.last_name}</td>
@@ -47,7 +65,7 @@ function App() {
                 <td>{item.phone}</td>
               </tr>
             ))}
-          </tbody>
+          </tbody> */}
         </Table>
       </Container>
     </div>
