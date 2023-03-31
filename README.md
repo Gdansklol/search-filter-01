@@ -4,6 +4,9 @@ This project was bootstrapped with [react-bootstarp](https://react-bootstrap.git
 
 ```
 npm i react-bootstrap
+or
+npm install react-bootstrap bootstrap
+
 ```
 
 ## Available Scripts
