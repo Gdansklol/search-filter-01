@@ -6,16 +6,20 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { data } from "./data.js";
 
 function App() {
-  console.log(data);
+  // console.log(data);
+  const [search, setSearch] = useState("");
 
-  const [search, setSearch] = useState("")
+  console.log(search);
   return (
     <div className="App">
       <Container>
         <h1 className="text-center mt-4">Contact Keeper</h1>
         <Form>
           <InputGroup className="my-3">
-            <Form.Control placeholder="Search contacts of investor..."/>
+            <Form.Control
+            onChange={(e)=> setSearch(e.target.value)}
+              placeholder="Search contacts of investor..."
+            />
           </InputGroup>
         </Form>
         <Table striped border hover>
@@ -27,10 +31,16 @@ function App() {
               <th>Phone</th>
             </tr>
           </thead>
-          
+
           <tbody>
-            {data.map((item) => (
-              <tr>
+            {data
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.first_name.toLowerCase().includes(search)
+              })
+              .map((item) => (
+              <tr key={item.id}>
                 <td>{item.first_name}</td>
                 <td>{item.last_name}</td>
                 <td>{item.email}</td>
