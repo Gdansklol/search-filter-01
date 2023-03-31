@@ -27,6 +27,7 @@ function App() {
               <th>Phone</th>
             </tr>
           </thead>
+          
           <tbody>
             {data.map((item) => (
               <tr>
@@ -36,7 +37,6 @@ function App() {
                 <td>{item.phone}</td>
               </tr>
             ))}
-          
           </tbody>
         </Table>
       </Container>
